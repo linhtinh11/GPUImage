@@ -116,8 +116,8 @@ void setColorConversion709( GLfloat conversionMatrix[9] )
     [_captureSession beginConfiguration];
     
 	// Add the video input	
-	NSError *error = nil;
-	videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:_inputCamera error:&error];
+//    NSError *error = nil;
+//    videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:_inputCamera error:&error];
 //    if ([_captureSession canAddInput:videoInput])
 //    {
 //        [_captureSession addInput:videoInput];
