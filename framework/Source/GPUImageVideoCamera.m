@@ -118,10 +118,10 @@ void setColorConversion709( GLfloat conversionMatrix[9] )
 	// Add the video input	
 	NSError *error = nil;
 	videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:_inputCamera error:&error];
-	if ([_captureSession canAddInput:videoInput]) 
-	{
-		[_captureSession addInput:videoInput];
-	}
+//    if ([_captureSession canAddInput:videoInput])
+//    {
+//        [_captureSession addInput:videoInput];
+//    }
 	
 	// Add the video frame output	
 	videoOutput = [[AVCaptureVideoDataOutput alloc] init];
@@ -210,15 +210,15 @@ void setColorConversion709( GLfloat conversionMatrix[9] )
     });
     
     [videoOutput setSampleBufferDelegate:self queue:cameraProcessingQueue];
-	if ([_captureSession canAddOutput:videoOutput])
-	{
-		[_captureSession addOutput:videoOutput];
-	}
-	else
-	{
-		NSLog(@"Couldn't add video output");
-        return nil;
-	}
+//    if ([_captureSession canAddOutput:videoOutput])
+//    {
+//        [_captureSession addOutput:videoOutput];
+//    }
+//    else
+//    {
+//        NSLog(@"Couldn't add video output");
+//        return nil;
+//    }
     
 	_captureSessionPreset = sessionPreset;
     [_captureSession setSessionPreset:_captureSessionPreset];
